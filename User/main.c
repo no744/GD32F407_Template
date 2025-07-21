@@ -23,6 +23,8 @@ int main(void) {
 	
 	//extern  void example_st7789_test();
 	//example_st7789_test();
+	extern  void example_lvgl_test();
+	example_lvgl_test();
 	while(1) {
 	  
 	}
