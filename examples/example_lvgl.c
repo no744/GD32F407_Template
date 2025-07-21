@@ -15,6 +15,8 @@ void example8_button(){
   lv_obj_t* screen = lv_scr_act();
   //创建要显示对象：按钮
   lv_obj_t* btn = lv_btn_create(screen);
+	lv_obj_set_style_bg_color(screen,lv_palette_main(LV_PALETTE_RED),0);
+	lv_obj_add_flag(btn,LV_OBJ_FLAG_CHECKABLE);
   //对显示进行设置
   lv_obj_set_size(btn,100,60);
 
@@ -32,6 +34,7 @@ void example_lvgl_test(){
 	//ST7789_Init();
 	//CST816T_Init();
 	lv_port_disp_init();
+	lv_port_indev_init();
 	example8_button();
   while(1){
 	   lv_tick_inc(5);
