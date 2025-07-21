@@ -1,0 +1,10 @@
+#忽略目录
+#/Listings只忽略根目录下的Listrings
+#Listings/忽略当前和子目录下的所有Listrings
+Listings/
+Objects/
+
+#忽略文件
+*.uvopt
+*.uvgui.*
+.zip
