@@ -9,7 +9,7 @@
 #include "lvgl.h"
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
-
+#include "ui.h"
 void example8_button(){
   //获取当前屏幕
   lv_obj_t* screen = lv_scr_act();
@@ -35,7 +35,13 @@ void example_lvgl_test(){
 	//CST816T_Init();
 	lv_port_disp_init();
 	lv_port_indev_init();
-	example8_button();
+	//example8_button();
+	ui_init();
+	LV_IMG_DECLARE(astro);
+  //创建gifui_panel2
+  lv_obj_t* gif = lv_gif_create(ui_Panel2);
+  //设置
+  lv_gif_set_src(gif,&astro);
   while(1){
 	   lv_tick_inc(5);
 		 lv_timer_handler();
